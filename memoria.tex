@@ -18,6 +18,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[a4paper, 12pt]{book}
+
 %\usepackage[T1]{fontenc}
 
 \usepackage[a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=3cm]{geometry}
@@ -37,7 +38,7 @@
 % cual los escribas, a veces totalmente en mayúsculas, a veces de otras
 % formas
 \title{Título del Trabajo con Letras Mayúsculas para Sustantivos y Adjetivos}
-\author{Nombre del autor / autora}
+\author{Diego Sota Rebollo}
 
 % Guarda el título, el autor y la fecha en variables
 \makeatletter
@@ -68,7 +69,7 @@ ESCUELA DE INGENIERÍA DE FUENLABRADA
 \vspace{1cm}
 
 \LARGE
-TITULACIÓN EN MAYÚSCULAS
+GRADO EN INGENIERÍA EN SISTEMAS AUDIOVISUALES Y MULTIMEDIA
 
 \vspace{1cm}
 \LARGE
@@ -83,12 +84,11 @@ TITULACIÓN EN MAYÚSCULAS
 
 \large
 Autor : \theauthor \\
-Tutor : Dr. Nombre del Profesor/a\\
-Cotutor: (si procede)
+Tutor : Dr. Jesús María González Barahona REVISAR\\
 \vspace{1cm}
 
 \large
-Curso académico 202X/202X
+Curso académico 2025/2026
 
 \end{center}
 \end{titlepage}
@@ -338,18 +338,18 @@ Así:
 \section{Objetivo general} % título de sección (se muestra)
 \label{sec:objetivo-general} % identificador de sección (no se muestra, es para poder referenciarla)
 
-Aquí vendría el objetivo general en una frase:
-Mi trabajo fin de grado consiste en crear de una herramienta de análisis de los comentarios jocosos en repositorios de software libre alojados en la plataforma GitHub.
-
-Recuerda que los objetivos siempre vienen en infinitivo.
+Este trabajo tiene como objetivo crear un videojuego completo y funcional, inspirado en el clásico juego de arcade Pacman, con mecánicas originales del género Rogue-like, utilizando tecnologías web.   
 
 
 \section{Objetivos específicos}
 \label{sec:objetivos-especificos}
 
-Los objetivos específicos se pueden entender como las tareas en las que se ha desglosado el objetivo general.
-Y, sí, también vienen en infinitivo.
+Se ha buscado la obtención de una experiencia de juego con la rejugabilidad como máxima, mediante la re-implementación de un algoritmo de generación procedural de laberintos, representados en forma de \emph{Tilemaps}. 
 
+Para conseguir una experiencia accesible desde una amplia gama de dispositivos, se ha seleccionado la tecnología web, mediante la representación de gráficos en tres dimensiones. 
+
+%-- TODO - Explicar mejor y decidir como citar
+A nivel de estructura, se ha optado por diseñar un sistema propio, basado en \emph{ECS}, que permite separar correctamente las responsabilidades dentro del flujo de ejecución de la lógica del juego.
 
 \section{Planificación temporal}
 \label{sec:planificacion-temporal}
@@ -447,40 +447,32 @@ Puedes probarlo en \url{https://www.tablesgenerator.com/}.
 \chapter{Diseño e implementación}
 \label{sec:diseno}
 
-Aquí viene todo lo que has hecho tú (tecnológicamente). 
-Puedes entrar hasta el detalle. 
-Es la parte más importante de la memoria, porque describe lo que has hecho tú.
-Eso sí, normalmente aconsejo no poner código, sino diagramas.
-
-
+El 
 
 \section{Arquitectura general} 
 \label{sec:arquitectura}
 
-Si tu proyecto es un software, siempre es bueno poner la arquitectura (que es cómo se estructura tu programa a ``vista de pájaro'').
 
-\begin{figure}
-  \centering
-  \includegraphics[width=9cm, keepaspectratio]{img/arquitectura.png}
-  \caption{Estructura del parser básico}
-  \label{fig:arquitectura}
-\end{figure}
+\section{Sistema Lógico}
+El núcleo de la aplicación es un bucle que ejecuta la lógica del juego. Para esto, 
+\subsection{Generación}
+\section{Sistema Gráfico}
+\subsection{Interfaz de Usuario}
+\subsection{Head-Up Display}
+\subsection{Escena}
+\section{Estado}
 
+\section{Prototipos y Metodología}
+% TODO - Citar Scrum 
+A fin de organizar mejor el proceso de desarrollo del proyecto, se ha requerido un sistema que permita planificar el trabajo de forma efectiva y sostenible en el medio plazo.
 
-Por ejemplo, puedes verlo en la figura~\ref{fig:arquitectura}.
-\LaTeX \ pone las figuras donde mejor cuadran. 
-Y eso quiere decir que quizás no lo haga donde lo hemos puesto\ldots 
-Eso no es malo.
-A veces queda un poco raro, pero es la filosofía de \LaTeX: tú al contenido, que yo me encargo de la maquetación.
+Pese a que el proyecto ha sido desarrollado en su totalidad por el alumno, con la ayuda y supervisión del tutor, la metodología de trabajo se ha asemejado a la propuesta en [[Scrum]]. Se han definido distintos sprints, asociados a una serie de objetivos. 
 
+Cada uno de estos sprints debe resultar en una versión estable del juego. Las ideas que pudieran surgir durante el transcurso de un sprint han sido apuntadas y revisadas al finalizar cada uno de los mismos.
+% TODO - Expandir
+Todos los elementos de la arquitectura se relacionan mediante el estado.
+--- 
 
- 
-Recuerda que toda figura que añadas a tu memoria debe ser explicada.
-Sí, aunque te parezca evidente lo que se ve en la figura~\ref{fig:arquitectura}, la figura en sí solamente es un apoyo a tu texto.
-Así que explica lo que se ve en la figura, haciendo referencia a la misma tal y como ves aquí.
-Por ejemplo: En la figura~\ref{fig:arquitectura} se puede ver que la estructura del \emph{parser} básico, que consta de seis componentes diferentes: los datos se obtienen de la red, y según el tipo de dato, se pasará a un \emph{parser} específico y bla, bla, bla\ldots
-
-Si utilizas una base de datos, no te olvides de incluir también un diagrama de entidad-relación.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
