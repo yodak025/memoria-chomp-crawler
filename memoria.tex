@@ -31,13 +31,13 @@
 \usepackage{float}  %% H para posicionar figuras
 \usepackage[nottoc, notlot, notlof, notindex]{tocbibind} %% Opciones de índice
 \usepackage{latexsym}  %% Logo LaTeX
-
 % Escribe el título y el nombre del autor / autora para que se use bien
 % en otras partes de la plantilla
 % Dependiendo de las partes de la plantilla, a veces aparecerán tal
 % cual los escribas, a veces totalmente en mayúsculas, a veces de otras
 % formas
-\title{Título del Trabajo con Letras Mayúsculas para Sustantivos y Adjetivos}
+% TODO - Elegir un buen título
+\title{Chomp Crawler: Adaptación al Entorno Web del Pac-Man Clásico.}
 \author{Diego Sota Rebollo}
 
 % Guarda el título, el autor y la fecha en variables
@@ -73,7 +73,7 @@ GRADO EN INGENIERÍA EN SISTEMAS AUDIOVISUALES Y MULTIMEDIA
 
 \vspace{1cm}
 \LARGE
-\textbf{TRABAJO FIN DE GRADO/MÁSTER}
+\textbf{TRABAJO FIN DE GRADO}
 
 \vspace{2cm}
 
@@ -83,8 +83,9 @@ GRADO EN INGENIERÍA EN SISTEMAS AUDIOVISUALES Y MULTIMEDIA
 \vspace{2cm}
 
 \large
-Autor : \theauthor \\
-Tutor : Dr. Jesús María González Barahona REVISAR\\
+Autor: \theauthor \\
+%-- JGB - Revisar, ¿te gusta así?
+Tutor: Dr. Jesús María González Barahona\\
 \vspace{1cm}
 
 \large
@@ -114,7 +115,7 @@ Curso académico 2025/2026
 \includegraphics[scale=0.6]{img/by-sa}
 %\includegraphics[scale=0.6]{img/by}
 
-%% Poner el año adecuado
+%% TODO - Poner el año adecuado
 \noindent©2025 \theauthor  \\
 Algunos derechos reservados  \\
 Este documento se distribuye bajo la licencia \\
@@ -129,49 +130,51 @@ disponible en \\
 \chapter*{}
 \pagenumbering{Roman} % para comenzar la numeracion de paginas en numeros romanos
 \begin{flushright}
-\textit{Dedicado a \\
-mi familia / mi abuelo / mi abuela}
+\textit{Dedicado a 
+Amparo Rebollo, \\
+por enseñarme el valor de la memoria.}
 \end{flushright}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Agradecimientos
 
+% TODO - Escribir agradecimientos
 \chapter*{Agradecimientos}
 %\addcontentsline{toc}{chapter}{Agradecimientos} % si queremos que aparezca en el índice
 \markboth{AGRADECIMIENTOS}{AGRADECIMIENTOS} % encabezado 
-
-Aquí vienen los agradecimientos\ldots Aunque está bien acordarse de la pareja, no hay que olvidarse de dar las gracias a tu madre, que aunque a veces no lo parezca disfrutará tanto de tus logros como tú\ldots 
-Además, la pareja quizás no sea para siempre, pero tu madre sí.
+%! Aquí vienen los agradecimientos. Aunque está bien acordarse de la pareja, 
+%! no hay que olvidarse de dar las gracias a tu madre, que aunque a veces no lo parezca 
+%! disfrutará tanto de tus logros como tú 
+%! Además, la pareja quizás no sea para siempre, pero tu madre sí.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen
+% TODO - Escribir resumen
 
 \chapter*{Resumen}
 %\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
 \markboth{RESUMEN}{RESUMEN} % encabezado
+%!Aquí viene un resumen del proyecto.
+%!Ha de constar de tres o cuatro párrafos, donde se presente de manera clara y concisa de qué va el proyecto. 
+%!Han de quedar respondidas las siguientes preguntas:
+  %!¿De qué va este proyecto? ¿Cuál es su objetivo principal?
+  %!¿Cómo se ha realizado? ¿Qué tecnologías están involucradas?
+  %!¿En qué contexto se ha realizado el proyecto? ¿Es un proyecto dentro de un marco general?
+%!Lo mejor es escribir el resumen al final.
 
-Aquí viene un resumen del proyecto.
-Ha de constar de tres o cuatro párrafos, donde se presente de manera clara y concisa de qué va el proyecto. 
-Han de quedar respondidas las siguientes preguntas:
-
-\begin{itemize}
-  \item ¿De qué va este proyecto? ¿Cuál es su objetivo principal?
-  \item ¿Cómo se ha realizado? ¿Qué tecnologías están involucradas?
-  \item ¿En qué contexto se ha realizado el proyecto? ¿Es un proyecto dentro de un marco general?
-\end{itemize}
-
-Lo mejor es escribir el resumen al final.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen en inglés
+% TODO - Write summary 
 
 \chapter*{Summary}
 %\addcontentsline{toc}{chapter}{Summary} % si queremos que aparezca en el índice
 \markboth{SUMMARY}{SUMMARY} % encabezado
 
-Here comes a translation of the ``Resumen'' into English. 
-Please, double check it for correct grammar and spelling.
-As it is the translation of the ``Resumen'', which is supposed to be written at the end, this as well should be filled out just before submitting.
+%! Here comes a translation of the ``Resumen'' into English. 
+%! Please, double check it for correct grammar and spelling.
+%! As it is the translation of the ``Resumen'', which is supposed 
+%! to be written at the end, this as well should be filled out just before submitting.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -182,6 +185,7 @@ As it is the translation of the ``Resumen'', which is supposed to be written at 
 % Las buenas noticias es que los índices se generan automáticamente.
 % Lo único que tienes que hacer es elegir cuáles quieren que se generen,
 % y comentar/descomentar esa instrucción de LaTeX.
+% TODO Gestionar índices
 
 %%%% Índice de contenidos
 \tableofcontents 
@@ -205,124 +209,9 @@ As it is the translation of the ``Resumen'', which is supposed to be written at 
 \label{sec:intro} % etiqueta para poder referenciar luego en el texto con ~\ref{sec:intro}
 \pagenumbering{arabic} % para empezar la numeración de página con números
 
-En este capítulo se introduce el proyecto.
-Debería tener información general sobre el mismo, dando la información sobre el contexto en el que se ha desarrollado.
-
-No te olvides de echarle un ojo a la página con los cinco errores de escritura más frecuentes\footnote{\url{http://www.tallerdeescritores.com/errores-de-escritura-frecuentes}}.
-
-Aconsejo a todo el mundo que mire y se inspire en memorias pasadas.
-Las memorias de los proyectos que he llevado yo están (casi) todas almacenadas en mi web del GSyC\footnote{\url{https://gsyc.urjc.es/~grex/pfcs/}}.
-
-En mayo de 2023 me apunté a un curso de innovación docente donde nos pidieron hacer un podcast con temática docente. Aproveché entonces para hacer un podcast de unos 30 minutos donde en los primeros quince minutos introducía LaTeX y la memoria, y en los segundos hacía hincapién en aquellas cosas que más os cuestan utilizar en la memoria: las figuras, las tablas y las citas. Podéis escuchar el podcast en Internet\footnote{\url{https://podcasters.spotify.com/pod/show/gregorio-robles9/episodes/Tu-memoria-de-Trabajo-Fin-de-Grado-o-de-Mster-en-LaTeX-e23hucr/a-a58kp2}}.
-
-
-\section{Sección}
-\label{sec:seccion}
-
-Esto es una sección, que es una estructura menor que un capítulo. 
-
-Por cierto, a veces me comentáis que no os compila por las tildes.
-Eso es un problema de codificación.
-Al guardar el archivo, guardad la codificación de ``ISO-Latin-1'' a ``UTF-8'' (o viceversa) y funcionará.
-
-\subsection{Estilo}
-\label{subsec:estilo}
-
-Recomiendo leer los consejos prácticos sobre escribir documentos científicos en \LaTeX \ de Diomidis Spinellis\footnote{\url{https://github.com/dspinellis/latex-advice}}.
-
-Lee sobre el uso de las comas\footnote{\url{http://narrativabreve.com/2015/02/opiniones-de-un-corrector-de-estilo-11-recetas-para-escribir-correctamente-la-coma.html}}. 
-Las comas en español no se ponen al tuntún.
-Y nunca, nunca entre el sujeto y el predicado (p.ej. en ``Yo, hago el TFG'' sobre la coma).
-La coma no debe separar el sujeto del predicado en una oración, pues se cortaría la secuencia natural del discurso.
-No se considera apropiado el uso de la llamada coma respiratoria o \emph{coma criminal}.
-Solamente se suele escribir una coma para marcar el lugar que queda cuando omitimos el verbo de una oración, pero es un caso que se da de manera muy infrecuente al escribir un texto científico (p.ej. ``El Real Madrid, campeón de Europa'').
-
-A continuación, viene una figura, la Figura~\ref{figura:foro_hilos}. 
-Observarás que el texto dentro de la referencia es el identificador de la figura (que se corresponden con el ``label'' dentro de la misma). 
-También habrás tomado nota de cómo se ponen las ``comillas dobles'' para que se muestren correctamente. 
-Nota que hay unas comillas de inicio (``) y otras de cierre (''), y que son diferentes.
-Volviendo a las referencias, nota que al compilar, la primera vez se crea un diccionario con las referencias, y en la segunda compilación se ``rellenan'' estas referencias. 
-Por eso hay que compilar dos veces tu memoria.
-Si no, no se crearán las referencias.
-
-
-
- \begin{figure}
-    \centering
-    \includegraphics[bb=0 0 800 600, width=12cm, keepaspectratio]{img/foro1}
-    \caption{Página con enlaces a hilos}
-    \label{figura:foro_hilos}
- \end{figure}
-
-
-A continuación un bloque ``verbatim'', que se utiliza para mostrar texto tal cual.
-Se puede utilizar para ofrecer el contenido de correos electrónicos, código, entre otras cosas.
-
-
-{\footnotesize
-\begin{verbatim}
-    From gaurav at gold-solutions.co.uk  Fri Jan 14 14:51:11 2005
-    From: gaurav at gold-solutions.co.uk (gaurav_gold)
-    Date: Fri Jan 14 19:25:51 2005
-    Subject: [Mailman-Users] mailman issues
-    Message-ID: <003c01c4fa40$1d99b4c0$94592252@gaurav7klgnyif>
-
-    Dear Sir/Madam,
-    How can people reply to the mailing list?  How do i turn off
-    this feature? How can i also enable a feature where if someone
-    replies the newsletter the email gets deleted?
-    Thanks
-
-    From msapiro at value.net  Fri Jan 14 19:48:51 2005
-    From: msapiro at value.net (Mark Sapiro)
-    Date: Fri Jan 14 19:49:04 2005
-    Subject: [Mailman-Users] mailman issues
-    In-Reply-To: <003c01c4fa40$1d99b4c0$94592252@gaurav7klgnyif>
-    Message-ID: <PC173020050114104851057801b04d55@msapiro>
-
-    gaurav_gold wrote:
-    >How can people reply to the mailing list?  How do i turn off
-    this feature? How can i also enable a feature where if someone
-    replies the newsletter the email gets deleted?
-
-    See the FAQ
-    >Mailman FAQ: http://www.python.org/cgi-bin/faqw-mm.py
-    article 3.11
-\end{verbatim}
-}
-
-
-
-\section{Estructura de la memoria}
-\label{sec:estructura}
-
-
-\begin{figure}
-  \centering
-  \includegraphics[width=9cm, keepaspectratio]{img/arquitectura.png}
-  \caption{Estructura del parser básico}
-  \label{fig:arquitectura}
-\end{figure}
-
-
-
-
-En esta sección se debería introducir la estructura de la memoria. 
-
-Así:
-
-
-\begin{itemize}
-  \item En el primer capítulo se hace una intro al proyecto.
-  
-  \item En el capítulo~\ref{chap:objetivos} (ojo, otra referencia automática) se muestran los objetivos del proyecto.
-  
-  \item A continuación se presenta el estado del arte en el capítulo~\ref{chap:estado}.
-  
-  \item \ldots
-\end{itemize}
-
-
+%! En este capítulo se introduce el proyecto.
+%! Debería tener información general sobre el mismo, 
+%! dando la información sobre el contexto en el que se ha desarrollado.
 
 
 
@@ -338,25 +227,45 @@ Así:
 \section{Objetivo general} % título de sección (se muestra)
 \label{sec:objetivo-general} % identificador de sección (no se muestra, es para poder referenciarla)
 
-Este trabajo tiene como objetivo crear un videojuego completo y funcional, inspirado en el clásico juego de arcade Pacman, con mecánicas originales del género Rogue-like, utilizando tecnologías web.   
+Este trabajo tiene como objetivo crear un videojuego completo y funcional, 
+inspirado en el clásico juego de arcade Pacman, con mecánicas originales del género Rogue-like, 
+tilizando tecnologías web.   
 
 
 \section{Objetivos específicos}
 \label{sec:objetivos-especificos}
 
-Se ha buscado la obtención de una experiencia de juego con la rejugabilidad como máxima, mediante la re-implementación de un algoritmo de generación procedural de laberintos, representados en forma de \emph{Tilemaps}. 
+Mediante la realización de este trabajo, se busca alcanzar los siguientes objetivos:
 
-Para conseguir una experiencia accesible desde una amplia gama de dispositivos, se ha seleccionado la tecnología web, mediante la representación de gráficos en tres dimensiones. 
+Exploración de tecnologías web relacionadas con gráficos 3D y desarrollo de interfaces de usuario,
+a fin de comprender sus capacidades y limitaciones en el contexto del desarrollo de videojuegos.
 
-%-- TODO - Explicar mejor y decidir como citar
-A nivel de estructura, se ha optado por diseñar un sistema propio, basado en \emph{ECS}, que permite separar correctamente las responsabilidades dentro del flujo de ejecución de la lógica del juego.
+Desarrollar un proyecto completo que abarque desde la concepción inicial hasta la implementación final,
+incluyendo diseño, programación, pruebas y documentación.
+
+Revisitar y poner en práctica algunos de los conceptos centrales del grado de Ingeniería en 
+Sistemas Audiovisuales y Multimedia, aplicándolos en un proyecto que sintetice los 
+conocimientos adquiridos durante el mismo.
+
+Se ha buscado la obtención de una experiencia de juego con la rejugabilidad como máxima, 
+mediante la re-implementación de un algoritmo de generación procedural de laberintos, 
+representados en forma de \emph{Tilemaps}. 
+Para conseguir una experiencia accesible desde una amplia gama de dispositivos, 
+se ha seleccionado la tecnología web, mediante la representación de gráficos en tres dimensiones. 
+% TODO - Explicar mejor y decidir como citar
+
+A nivel de estructura, se ha optado por diseñar un sistema propio, 
+basado en \emph{ECS}, que permite separar correctamente las responsabilidades 
+dentro del flujo de ejecución de la lógica del juego.
 
 \section{Planificación temporal}
 \label{sec:planificacion-temporal}
+%TODO - Planificación temporal
 
-A mí me gusta que aquí pongáis una descripción de lo que os ha llevado realizar el trabajo.
-Hay gente que añade un diagrama de GANTT.
-Lo importante es que quede claro cuánto tiempo llevas (tiempo natural, p.ej., 6 meses) y a qué nivel de esfuerzo (p.ej., principalmente los fines de semana).
+% A mí me gusta que aquí pongáis una descripción de lo que os ha llevado realizar el trabajo.
+% Hay gente que añade un diagrama de GANTT.
+% Lo importante es que quede claro cuánto tiempo llevas (tiempo natural, p.ej., 6 meses) y
+% a qué nivel de esfuerzo (p.ej., principalmente los fines de semana).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -366,75 +275,260 @@ Lo importante es que quede claro cuánto tiempo llevas (tiempo natural, p.ej., 6
 
 \cleardoublepage
 \chapter{Estado del arte}
+\section{Análisis Técnico de Pac-Man}
+\label{sec:analisis_pacman}
+
+Para comprender la magnitud de la ingeniería detrás de \emph{Pac-Man}, es indispensable acudir a la documentación 
+técnica exhaustiva recopilada por Jamey Pittman en \emph{The Pac-Man Dossier} \cite{pittman_pacman_dossier}. 
+Este compendio, fruto de la ingeniería inversa y el análisis del desensamblado del código original en ROM, 
+revela que la aparente simplicidad del juego esconde un sistema determinista de alta complejidad. 
+A diferencia de las aproximaciones modernas basadas en heurísticas complejas, \emph{Pac-Man} demuestra cómo 
+un conjunto de reglas lógicas elementales, ejecutadas sobre hardware limitado, puede generar comportamientos 
+emergentes sofisticados. 
+A continuación, se desgranan los aspectos críticos de su diseño basándose en esta referencia técnica.
+
+\subsection{Historia y relevancia en la industria}
+Desarrollado por Namco y diseñado por Toru Iwatani, \emph{Pac-Man} (originalmente \emph{Puck-Man}) debutó en Japón 
+el 22 de mayo de 1980. En un mercado saturado por \emph{shooters} espaciales derivados del éxito de \emph{Space Invaders}, 
+Iwatani buscó expandir la demografía de los salones recreativos hacia el público femenino y las parejas. Para ello, 
+conceptualizó una mecánica centrada en ``comer'' (\emph{taberu} en japonés), alejándose de la violencia explícita. 
+El diseño de personajes, inspirado en la cultura \emph{kawaii}, y el uso pionero de colores pastel sobre un fondo negro, 
+rompieron con la estética militarista predominante.
+
+La llegada del título a Estados Unidos en octubre de 1980, licenciado por Midway, supuso un fenómeno cultural sin precedentes. 
+A nivel técnico, el juego introdujo innovaciones que definirían el medio: fue uno de los primeros en implementar 
+\emph{cutscenes} o interludios narrativos y, más importante aún, dotó a los enemigos de ``personalidad'' mediante algoritmos 
+de comportamiento diferenciados. 
+Esta decisión de diseño transformó a los fantasmas de meros obstáculos móviles a agentes con roles tácticos específicos, 
+sentando las bases de la inteligencia artificial en videojuegos.
+
+\subsection{Mecánicas fundamentales y sistema de teselas}
+La lógica de \emph{Pac-Man} opera sobre una cuadrícula de teselas (\emph{tilemap}) de $28 \times 36$ celdas, donde cada tesela 
+equivale a $8 \times 8$ píxeles. El movimiento de los actores (Pac-Man y los fantasmas) no es libre, sino que está restringido 
+a los centros de estas teselas. El motor del juego evalúa la posición de cada entidad basándose en su píxel central; si este punto 
+entra en una nueva tesela, se actualiza la lógica de ocupación. 
+Este sistema discretizado permite simplificar la detección de colisiones: la muerte del jugador ocurre únicamente cuando su tesela 
+ocupada coincide con la de un fantasma.
+
+Una restricción mecánica crucial es la prohibición de detenerse o invertir el sentido de la marcha voluntariamente. 
+Los fantasmas siempre deben avanzar hacia la siguiente tesela disponible, evaluando las intersecciones antes de llegar a ellas. 
+Esta anticipación es clave: la decisión de giro se toma un paso antes de la intersección física, basándose en la distancia euclidiana 
+hacia una ``tesela objetivo'' (\emph{Target Tile}). 
+Este determinismo permite a los jugadores expertos predecir y manipular el flujo del juego, transformando la experiencia de reacción 
+en una de planificación estratégica.
+
+
+\subsection{Inteligencia Artificial: El sistema de objetivos}
+La ``personalidad'' de cada fantasma es el resultado de asignar una tesela objetivo (\emph{Target Tile}) diferente a cada uno, 
+calculada en tiempo real según la posición del jugador. Según el análisis de Pittman, los comportamientos se definen de la siguiente manera:
+
+\begin{itemize}
+    \item \textbf{Blinky (Rojo - \emph{Shadow}):} Su objetivo es la tesela que ocupa actualmente Pac-Man. 
+    Esto genera una persecución directa e implacable, actuando como una sombra que sigue la ruta más corta hacia el jugador.
+    \item \textbf{Pinky (Rosa - \emph{Speedy}):} Su lógica apunta a cuatro teselas por delante de la posición actual de Pac-Man. 
+    Esto provoca que intente emboscar al jugador, cortándole el paso en las intersecciones en lugar de seguirlo desde atrás.
+    \item \textbf{Inky (Cian - \emph{Bashful}):} Utiliza una lógica vectorial compleja. Se traza un vector desde la posición de Blinky 
+    hasta dos teselas por delante de Pac-Man, y se duplica esa distancia en la dirección opuesta. 
+    Esto hace que su movimiento dependa de la posición relativa de su compañero rojo, resultando en maniobras de flanqueo difíciles 
+    de predecir.
+    \item \textbf{Clyde (Naranja - \emph{Pokey}):} Posee un comportamiento dual basado en la proximidad. 
+    Si está a más de ocho teselas de Pac-Man, su objetivo es el jugador (como Blinky). Sin embargo, si se acerca a menos de ocho 
+    teselas, su objetivo cambia inmediatamente a su esquina de patrulla (esquina inferior izquierda), haciéndole huir y parecer 
+    desinteresado o ``tonto''.
+\end{itemize}
+
+\subsection{Ciclos de comportamiento y dificultad}
+El ritmo del juego está dictado por la alternancia cíclica entre dos modos globales de comportamiento: 
+\emph{Scatter} (Dispersión) y \emph{Chase} (Persecución). 
+Durante el modo \emph{Scatter}, cada fantasma ignora al jugador y trata de alcanzar una tesela objetivo fija en una de las cuatro esquinas 
+del laberinto, lo que les obliga a patrullar zonas específicas y da un respiro al jugador. Tras un tiempo predefinido, cambian a modo 
+\emph{Chase}, activando sus algoritmos de persecución individuales descritos anteriormente. 
+Estos ciclos se repiten en intervalos fijos (ej. 7 segundos de dispersión, 20 de persecución) que varían según el nivel.
+
+La curva de dificultad no se basa solo en la velocidad, sino en la alteración de estos tiempos. A medida que se superan niveles, 
+los periodos de \emph{Scatter} se reducen drásticamente hasta desaparecer, manteniendo a los fantasmas en persecución constante. 
+Adicionalmente, se introduce la mecánica de ``Cruise Elroy'': cuando quedan pocos puntos en el mapa, Blinky aumenta su velocidad 
+porcentualmente, llegando a superar la del propio Pac-Man, lo que intensifica la tensión final de cada nivel.
+
+
+\section{Técnicas utilizadas}
+\subsection{Generación procedural de laberintos.}
+Si bien la literatura académica estandariza algoritmos de árboles de expansión como 
+\textit{Prim} o \textit{Recursive Backtracking} para la creación de laberintos, 
+su aplicación resulta inviable para mecánicas tipo \textit{Pac-Man}. Estos métodos 
+generan matemáticamente ``laberintos perfectos'' ---estructuras acíclicas repletas de callejones 
+sin salida---, lo que anula las rutas de evasión y la dinámica de persecución cíclica esencial 
+en el género arcade. Debido a estas limitaciones estructurales, se ha descartado el uso de 
+generadores de grafos convencionales en favor de la implementación basada en restricciones 
+de teselas propuesta por Lebron \cite{shaunlebron:pacman-mazegen}. Esta solución específica permite imponer 
+condiciones de diseño no triviales, tales como la simetría axial del tablero, la eliminación de 
+\textit{dead-ends} (\textit{braiding}) y la reserva de zonas funcionales para la IA 
+(``casa de fantasmas''), garantizando niveles topológicamente válidos para la navegación 
+de agentes autónomos.
+
+\subsection{Arquitectura Entity Component System (ECS)}
+El desarrollo de videojuegos modernos ha evidenciado las limitaciones estructurales de la 
+Programación Orientada a Objetos (OOP) clásica, especialmente cuando se enfrentan problemas de 
+jerarquías de herencia rígidas y cuellos de botella en el rendimiento de la memoria. Se ha considerado 
+la arquitectura \emph{Entity Component System} (ECS), un patrón arquitectónico que prioriza la composición 
+sobre la herencia y separa estrictamente los datos del comportamiento. 
+A diferencia del modelo tradicional donde un objeto encapsula ambos aspectos, en ECS una \emph{Entidad} se reduce a un 
+identificador único (generalmente un entero) que carece de lógica o datos propios; su función es actuar como un contenedor 
+abstracto que agrupa \emph{Componentes} \cite{nystrom2014game}. Estos componentes son estructuras de datos puras (structs), 
+desprovistas de métodos, que almacenan el estado específico de un aspecto del juego (e.g., `Posición`, `Velocidad`, `Renderable`).
+
+La lógica del juego se traslada a los \emph{Sistemas}, que operan de manera transversal sobre conjuntos de entidades que poseen una firma 
+de componentes específica. Por ejemplo, un \emph{Sistema de Movimiento} iterará sobre todas las entidades que posean tanto `Posición` 
+como `Velocidad`, actualizando los datos de la primera en función de la segunda, ignorando cualquier otro atributo. 
+Este desacoplamiento total permite una flexibilidad extrema en tiempo de diseño: es posible crear nuevos tipos de enemigos o 
+comportamientos emergentes simplemente combinando componentes existentes, sin necesidad de refactorizar complejas cadenas 
+de herencia ni enfrentarse al ``problema del diamante'' típico de la OOP \cite{harkonen2019advantages}.
+
+\section{Tecnologías}
+
+\subsection{HTML5 y los navegadores web modernos.}
+
+HTML5 representa la evolución más significativa del estándar HyperText Markup Language (HTML),
+establecido por el World Wide Web Consortium (W3C) como la base para el desarrollo de aplicaciones web 
+ricas y multimedia \cite{w3c_html5}. A diferencia de versiones anteriores centradas en la presentación de 
+contenido estático, HTML5 introduce APIs nativas que habilitan funcionalidades avanzadas, tales como la 
+reproducción de audio y vídeo sin plugins externos, el almacenamiento local de datos y la manipulación de gráficos 
+en dos y tres dimensiones mediante WebGL. 
+Esta expansión de capacidades ha transformado los navegadores web en plataformas completas para el desarrollo de 
+aplicaciones interactivas, eliminando la dependencia de tecnologías propietarias como Flash.
+
+La selección de HTML5 se justifica por su accesibilidad multiplataforma y soporte nativo en navegadores modernos 
+como Chrome y Firefox, facilitando la ejecución sin instalación y la integración con WebGL para gráficos 3D. 
+Además, simplifica el despliegue y promueve la interoperabilidad, demostrando la viabilidad de los navegadores 
+para videojuegos complejos \cite{mdn_web_apis} \cite{freeman2011definitive}.
+
+\subsection{EcmaScript 6 y Typescript.}
+
+La base del desarrollo se fundamenta en JavaScript moderno, entendido como la implementación del estándar internacional 
+ECMA-262 (ECMAScript) \cite{ecma262}. Se toma como punto de inflexión la especificación ES6 (ES2015) y sus sucesoras, 
+que introdujeron la sintaxis de módulos, promesas y clases, permitiendo al lenguaje evolucionar desde simples scripts a 
+arquitecturas de software complejas \cite{rauschmayer2014exploring}. 
+Esta evolución resulta esencial para proyectos web de escala, ya que facilita la modularización del código y la gestión asíncrona, 
+alineándose con las necesidades de un videojuego interactivo que requiere actualizaciones en tiempo real y manejo eficiente de eventos.
+
+Para garantizar la escalabilidad y la seguridad del código en un entorno de producción, se adopta TypeScript. 
+Esta tecnología opera como un superconjunto sintáctico estricto de JavaScript que añade tipado estático opcional y 
+comprobación de errores en tiempo de compilación \cite{cherny2019programming}. TypeScript no reemplaza a JavaScript, 
+sino que mejora la experiencia de desarrollo (DX) y la mantenibilidad, transpilándose finalmente a código JavaScript 
+estándar compatible con cualquier navegador o entorno Node.js, asegurando así un código autodocumentado y resiliente 
+ante errores de tipo comunes en tiempo de ejecución. 
+Esta elección se justifica por la complejidad inherente a un proyecto de videojuego, donde la detección temprana de errores 
+reduce significativamente el tiempo de depuración.
+
+\subsection{Gráficos 3D en la web con WebGL.\@ \emph{Three.js.}}
+
+WebGL (Web Graphics Library) surge como la estandarización llevada a cabo por el Khronos Group para trasladar las capacidades de 
+OpenGL ES 2.0 a los navegadores web, permitiendo renderizado de gráficos 3D acelerados por hardware directamente en el 
+elemento canvas de HTML5 sin necesidad de plugins \cite{khronos_webgl_spec}. 
+Esta API de bajo nivel proporciona acceso directo a la GPU mediante programas de sombreado (shaders) escritos en GLSL, 
+habilitando efectos visuales complejos y rendimiento óptimo en aplicaciones web \cite{mdn_webgl}. 
+Sin embargo, su complejidad técnica resulta excesivamente verbosa para el desarrollo ágil, requiriendo gestión manual de matrices, 
+buffers y estados gráficos.
+
+Para mitigar esta complejidad, se integra Three.js, una biblioteca de alto nivel que abstrae las primitivas de WebGL mediante una 
+arquitectura orientada a objetos \cite{threejs_docs}\footnote{\url{https://github.com/mrdoob/three.js}}. 
+Three.js gestiona el grafo de escena, las cámaras, la iluminación y los materiales, permitiendo focalizar el desarrollo en la 
+lógica visual y la experiencia de usuario en lugar de en la gestión matemática de matrices y buffers de memoria crudos. 
+Esta abstracción resulta esencial para proyectos de videojuegos web, donde la productividad del desarrollador y la mantenibilidad del 
+código son críticas para cumplir con plazos y objetivos de calidad.
+
+Se ha elegido esta tecnología por su adopción generalizada en la industria del desarrollo web. Además, resulta muy pertinente
+en el contexto del Grado en Ingeniería en Sistemas Audiovisuales y Multimedia, siendo una tecnología en la que se ha profundizado
+durante el plan de estudios.
+
+\subsection{Interfaces Gráficas de Usuario con \emph{React.js}. Estados globales con \emph{Zustand}}
+
+React.js, desarrollado originalmente por Facebook (ahora Meta) en 2013 para solucionar problemas de rendimiento en interfaces con 
+actualizaciones de datos masivas y constantes, se ha establecido como la biblioteca estándar de facto para la construcción de 
+interfaces de usuario modernas~\cite{react_docs}. Su filosofía se centra en una arquitectura basada en componentes reutilizables 
+y un paradigma declarativo, donde el desarrollador define ``qué'' debe mostrarse y la biblioteca gestiona el ``cómo'' \cite{banks2020learning}. 
+La clave de su eficiencia reside en el Virtual DOM, una representación en memoria del árbol de elementos que permite ejecutar un 
+algoritmo de reconciliación (Diffing Algorithm), actualizando en el DOM real únicamente aquellos nodos que han sufrido cambios. 
+Esto supone una optimización drástica en términos de rendimiento frente a la manipulación directa del navegador.
+
+La selección de React se justifica por su madurez en el ecosistema de desarrollo web y su capacidad para gestionar interfaces complejas 
+con múltiples actualizaciones de estado, como es el caso de un videojuego donde la UI debe reflejar constantemente cambios en puntuaciones, 
+vidas y estados de juego. Además, resulta pertinente en el contexto del Grado en Ingeniería en Sistemas Audiovisuales y Multimedia, 
+siendo una tecnología que permite aplicar los conocimientos adquiridos en desarrollo de aplicaciones web de forma ágil. Siendo un 
+framework ampliamente adoptado en la industria, su uso en este proyecto facilita la adquisición de habilidades prácticas y relevantes
+para el mercado laboral.
+
+Complementando a React, se integra Zustand para la gestión del estado global de la aplicación. Esta librería ha experimentado una 
+adopción exponencial debido a su capacidad para simplificar el flujo de datos sin el \emph{boilerplate} o código repetitivo excesivo asociado 
+a soluciones tradicionales como \emph{Redux} \cite{zustand_docs}. Zustand utiliza un modelo de almacén (store) centralizado basado en hooks 
+que permite a cualquier componente acceder y modificar el estado de manera directa y reactiva, resolviendo problemas de paso de 
+propiedades por múltiples niveles de componentes (prop-drilling) con una huella de memoria mínima y una API extremadamente concisa. 
+Esta elección resulta crítica para la gestión del estado de un videojuego, donde posiciones de entidades, puntuaciones y eventos 
+requieren actualizaciones frecuentes sin comprometer el rendimiento.
+
+\subsection{\emph{React Three Fiber}.\@ Integración de Three con React}
+
+React Three Fiber (R3F) se implementa como un renderizador personalizado de React para Three.js, actuando como un puente arquitectónico 
+que traslada el paradigma declarativo y basado en componentes de React al entorno imperativo de los gráficos 3D \cite{r3f_docs}. 
+A diferencia de una simple envoltura (wrapper), R3F crea un grafo de escena dinámico donde cada objeto 3D se instancia como un 
+componente nativo de React, permitiendo gestionar el ciclo de vida, los eventos y el estado de la escena (cámaras, mallas, luces) 
+mediante el ecosistema estándar de hooks, props y contexto. Esta arquitectura es posible gracias a la API de renderizadores personalizados
+de React, que permite extender el framework más allá del DOM tradicional \cite{react_reconciler}.
+
+La principal fortaleza técnica de R3F radica en que delega la gestión del bucle de renderizado y la optimización de recursos al propio 
+reconciliador de React, garantizando que no exista sobrecarga de rendimiento (overhead) respecto al uso de Three.js vainilla, 
+al tiempo que facilita la integración de interactividad compleja en entornos web.
+
+La selección de R3F se justifica por su capacidad para unificar la gestión de la interfaz de usuario 2D y la escena 3D bajo un único modelo 
+de programación, eliminando la necesidad de sincronizar manualmente el estado entre React y Three.js. Esta decisión arquitectónica 
+permite aprovechar las ventajas de ambas tecnologías sin comprometer el rendimiento, demostrando la viabilidad de paradigmas declarativos
+en aplicaciones gráficas interactivas complejas.
+
+\subsection{Algorítmos con \emph{Python 3}.\@ \emph{NumPy}}
+La elección de Python 3 como lenguaje vehicular para los algoritmos de generación procedural no responde únicamente a su 
+sintaxis legible, sino a su consolidación como un entorno de producción robusto y versátil. 
+A diferencia de su concepción original como lenguaje de \emph{scripting}, las iteraciones modernas de Python 3 han introducido 
+características como las anotaciones de tipo y mejoras significativas en la gestión asíncrona, lo que ha permitido su adopción 
+masiva en infraestructuras críticas de ingeniería de software \cite{ramalho2022fluent}. 
+Su naturaleza multiparadigmática facilita la implementación de lógica compleja mediante patrones idiomáticos que reducen 
+la deuda técnica y favorecen la mantenibilidad del código a largo plazo. Además, su extensa biblioteca estándar y la madurez 
+de su ecosistema de terceros permiten desacoplar la lógica de generación matemática de la capa de presentación web, 
+asegurando una arquitectura modular donde los algoritmos pueden evolucionar independientemente del cliente gráfico.
+
+No obstante, la naturaleza interpretada de Python puede suponer un cuello de botella en operaciones de cálculo intensivo. 
+Para mitigar esta limitación en el procesamiento de las matrices del laberinto, se ha integrado NumPy, la biblioteca 
+fundamental para la computación científica en este ecosistema \cite{mckinney2022python}. La ventaja crítica de NumPy 
+reside en su objeto principal, el \emph{ndarray}, que a diferencia de las listas nativas de Python —que son colecciones 
+de punteros a objetos dispersos en memoria—, almacena los datos en bloques de memoria contiguos, similar a 
+C \cite{harris2020array}. Esta arquitectura permite la ejecución de operaciones vectorizadas y \emph{broadcasting}, 
+eliminando la necesidad de bucles explícitos en el nivel del intérprete y delegando el cómputo a rutinas optimizadas 
+de bajo nivel. 
+
+\subsection{WASM y ejectución de código nativo en navegadores web.\@ Pyodide.}
+La necesidad de ejecutar operaciones computacionalmente costosas en el lado del cliente, superando las limitaciones 
+de rendimiento inherentes a JavaScript, motivó el surgimiento de \emph{WebAssembly} (WASM). 
+Concebido originalmente por el W3C, WASM se define como un formato de instrucciones binario diseñado para ser un objetivo 
+de compilación eficiente para lenguajes de alto nivel como C, C++ o Rust \cite{haas2017bringing}. 
+Su adopción en la actualidad responde a la capacidad de ejecutar código a velocidades cercanas a las nativas dentro 
+del entorno seguro (\emph{sandbox}) del navegador, permitiendo portar motores de física, decodificadores de video o 
+algoritmos científicos complejos que anteriormente requerían ejecución en servidor. Al tratarse de un estándar abierto 
+soportado por los principales motores de navegación, WASM actúa como una capa de abstracción sobre el hardware subyacente, 
+garantizando una ejecución determinista y eficiente independientemente de la plataforma del usuario \cite{rossberg2018bringing}.
+
+En el contexto específico de este proyecto, para habilitar la ejecución del generador de laberintos escrito en Python 
+dentro del navegador, se ha integrado \emph{Pyodide}\footnote{\url{https://github.com/pyodide/pyodide}}. Esta solución no es un simple transpilador, sino una distribución 
+completa de CPython portada a WebAssembly mediante la cadena de herramientas \emph{Emscripten} \cite{pyodide_docs}. 
+Su arquitectura se distingue por incluir un sistema de archivos virtual (MEMFS) que simula el entorno de disco necesario 
+para la biblioteca estándar de Python y por su capacidad de cargar dinámicamente paquetes científicos compilados, como NumPy, 
+que mantienen sus optimizaciones en C/Fortran. Un aspecto crítico de su diseño es la interfaz de funciones foráneas (FFI) 
+bidireccional, que permite al código Python manipular el DOM y acceder a objetos JavaScript directamente, y viceversa, 
+facilitando una integración transparente entre ambos contextos.
+
 \label{chap:estado}
 
-Descripción de las tecnologías que utilizas en tu trabajo. 
-Con dos o tres párrafos por cada tecnología, vale. 
-Se supone que aquí viene todo lo que no has hecho tú.
-
-Puedes citar libros, como el de Bonabeau et al., sobre procesos estigmérgicos~\cite{bonabeau:_swarm}. 
-Me encantan los procesos estigmérgicos.
-Deberías leer más sobre ellos.
-Pero quizás no ahora, que tenemos que terminar la memoria para sacarnos por fin el título.
-Nota que el \~ \ añade un espacio en blanco, pero no deja que exista un salto de línea. 
-Imprescindible ponerlo para las citas.
-
-Citar es importantísimo en textos científico-técnicos. 
-Porque no partimos de cero.
-Es más, partir de cero es de tontos; lo suyo es aprovecharse de lo ya existente para construir encima y hacer cosas más sofisticadas.
-¿Dónde puedo encontrar textos científicos que referenciar?
-Un buen sitio es Google Scholar\footnote{\url{http://scholar.google.com}}.
-Por ejemplo, si buscas por ``stigmergy libre software'' para encontrar trabajo sobre software libre y el concepto de \emph{estigmergia} (¿te he comentado que me gusta el concepto de estigmergia ya?), encontrarás un artículo que escribí hace tiempo cuyo título es ``Self-organized development in libre software: a model based on the stigmergy concept''.
-Si pulsas sobre las comillas dobles (entre la estrella y el ``citado por ...'', justo debajo del extracto del resumen del artículo, te saldrá una ventana emergente con cómo citar.
-Abajo a la derecha, aparece un enlace BibTeX.
-Púlsalo y encontrarás la referencia en formato BibTeX, tal que así:
-
-{\footnotesize
-\begin{verbatim}
-@inproceedings{robles2005self,
-  title={Self-organized development in libre software:
-         a model based on the stigmergy concept},
-  author={Robles, Gregorio and Merelo, Juan Juli\'an 
-          and Gonz\'alez-Barahona, Jes\'us M.},
-  booktitle={ProSim'05},
-  year={2005}
-}
-\end{verbatim}
-}
-
-Copia el texto en BibTeX y pégalo en el fichero \texttt{memoria.bib}, que es donde están las referencias bibliográficas.
-Para incluir la referencia en el texto de la memoria, deberás citarlo, como hemos hecho antes con~\cite{bonabeau:_swarm}, lo que pasa es que en vez de el identificador de la cita anterior (bonabeau:\_swarm), tendrás que poner el nuevo (robles2005self).
-Compila el fichero \texttt{memoria.tex} (\texttt{pdflatex memoria.tex}), añade la bibliografía (\texttt{bibtex memoria.aux}) y vuelve a compilar \texttt{memoria.tex} (\texttt{pdflatex memoria.tex})\ldots y \emph{voilà} ¡tenemos una nueva cita~\cite{robles2005self}!
-
-También existe la posibilidad de poner notas al pie de página, por ejemplo, una para indicarte que visite la página del GSyC\footnote{\url{http://gsyc.es}}.
-
-
-
-\section{Sección 1} 
-\label{sec:seccion1}
-
-Hemos hablado de cómo incluir figuras.
-Pero no hemos dicho nada de tablas.
-A mí me gustan las tablas.
-Mucho.
-Aquí un ejemplo de tabla, la Tabla~\ref{tab:ejemplo} (siento ser pesado, pero nota cómo he puesto la referencia).
-
-\begin{table}
- \begin{center}
-  \begin{tabular}{ | l | c | r |} % tenemos tres colummnas, la primera alineada a la izquierda (l), la segunda al centro (c) y la tercera a la derecha (r). El | indica que entre las columnas habrá una línea separadora.
-    \hline
-    Uno & 2 & 3 \\ \hline % el hline nos da una línea vertical
-    Cuatro & 5 & 6 \\ \hline
-    Siete & 8 & 9 \\
-    \hline
-  \end{tabular}
-  \caption{Ejemplo de tabla. Aquí viene una pequeña descripción (el \emph{caption}, el pie de tabla/figura) del contenido de la tabla. Si la tabla no es autoexplicativa, siempre viene bien aclararla aquí.}
-  \label{tab:ejemplo}
- \end{center}
-\end{table}
-
-Hay un sitio en Internet donde puedes diseñar las tablas fácilmente y luego hacer un corta y pega del resultado en tu editor.
-Puedes probarlo en \url{https://www.tablesgenerator.com/}.
+% Descripción de las tecnologías que utilizas en tu trabajo. 
+% Con dos o tres párrafos por cada tecnología, vale. 
+% Se supone que aquí viene todo lo que no has hecho tú.
 
 
 
@@ -451,11 +545,94 @@ El
 
 \section{Arquitectura general} 
 \label{sec:arquitectura}
+\subsection{ECS}
+Para estructurar la lógica del juego, se ha optado por utilizar una adaptación del patrón de arquitectura 
+\emph{Entity-Component-System} (ECS). Este patrón permite separar claramente las responsabilidades
+dentro del flujo de ejecución de la lógica del juego, facilitando la escalabilidad y el mantenimiento
+del código. 
+Siguiendo esta idea, los elementos del juego se representan como \emph{entidades} compuestas por
+\emph{componentes} que encapsulan datos específicos. Esto fuerza a los distintos elementos del estado
+a ser estructurados de manera homogénea, facilitando la generalización de las operaciones sobre ellos.
+Estas operaciones ocurren dentro de \emph{sistemas}, que procesan las entidades que poseen los 
+componentes relevantes para su función.
+
+\section{Motor Lógico}
+El núcleo de la aplicación es un bucle que ejecuta la lógica del juego. Para esto, se ha implementado
+una clase \texttt{GameLoop}, que se encarga de orquestar la actualización del estado del juego y la
+renderizado de la escena gráfica. Exte bucle ejecuta en cada iteración la logica del juego. Esto incluye
+la lógica global de la aplicación, el manejo de los estados de la partida y la ejectución de los 
+sistemas ECS cuando la partida se encuentra en ejectución.
 
 
-\section{Sistema Lógico}
-El núcleo de la aplicación es un bucle que ejecuta la lógica del juego. Para esto, 
+
 \subsection{Generación}
+
+Uno de los pilares fundamentales del proyecto es la generación procedural de laberintos. 
+La rejugabilidad, identificada como objetivo principal en la sección~\ref{sec:objetivos-especificos}, 
+requiere que cada partida presente un escenario diferente, lo cual hace inviable el diseño manual 
+de niveles. 
+Se optó por implementar un sistema de generación procedural capaz de producir laberintos con las 
+características topológicas del clásico Pac-Man: un espacio cerrado con pasillos interconectados, 
+esquinas redondeadas y zonas de alta densidad de conexiones que favorecen tanto la huida como la 
+persecución.
+
+Para este propósito, se llevó a cabo una reimplementación del algoritmo desarrollado por 
+Shaun Lebron~\cite{shaunlebron:pacman-mazegen-source}~\cite{shaunlebron:pacman-mazegen}. 
+La elección de este algoritmo se fundamenta en su capacidad demostrada para producir 
+laberintos que preservan la esencia del diseño original de Pac-Man, evitando tanto la 
+generación de espacios excesivamente abiertos como de corredores lineales predecibles.
+
+El sistema genera representaciones de laberintos en forma de mapas de teselas o \emph{tilemaps}, es decir, 
+matrices bidimensionales donde cada elemento es un identificador del tipo de tesela que ocupa esa posición
+(pared, pasillo, esquina, etc.). 
+Esta representación matricial facilita tanto el procesamiento algorítmico como la posterior 
+traducción a geometría tridimensional.
+Para la implementación de este módulo, se seleccionó el lenguaje Python debido a la madurez 
+de su ecosistema en el manejo de estructuras de datos multidimensionales, específicamente a través 
+de la biblioteca NumPy. 
+
+A continuación, se detalla el flujo de generación del laberinto:
+
+\subsubsection{Celdas}
+Para poder comprender el funcionamiento del algoritmo, es necesario introducir el concepto de
+\emph{celdas} (\emph{cells}).
+Una celda es un nodo con propiedades utilizado para construir una versión abstracta del laberinto.
+Los laberintos en Pac-Man se caracterizan por buscar deliberadamente la presencia de bucles. Por esto,
+en términos de forma, es de mayor utilidad entenderlos nó como un conjunto de caminos interconectados,
+sino como un puzzle formado por poliominós, figuras formadas por la unión de cuadrados. Cada celda representa
+uno de estos cuadrados. 
+
+
+\subsubsection{La Matriz de Celdas y sus Conexiones}
+Las celdas presentan una dualidad intrínseca: por un lado, son unidades discretas que componen la estructura de una 
+matriz bidimensional; por otro, actúan como nodos en un grafo que interconecta cada celda con sus vecinas ortogonalmente adyacentes
+(vecindad de Von Newmann). Esto resulta muy útil, pues permite recorrer las celdas mediante la indexación matricial, pero también
+permite acceder de una celda a otra, a partir de las conexiones que se establecen entre ellas.
+% Debes explicar que esta matriz de celdas es solo una mitad. 
+
+El algoritmo comienza inicializando una matriz de celdas, donde cada celda está desconectada de sus vecinas. Resulta fundamental 
+precisar que todas las celdas contienen una referencia a sus vecinas, independientemente de si pertenecen o no a la misma 
+figura poliominal. Por tanto, se define \emph{la celda siguiente en una dirección} como aquella que se encuentre adyacente en dicha 
+dirección para una cierta celda. Esta es siempre es accesible desde la referencia que posee cada una de sus vecinas y solo se 
+considerarán conectadas las celdas que pertenezcan a la misma figura.
+
+El algorítmo comienza creando las referencias entre las celdas adyacentes, manteniendo todas las conexiones inicialmente deshabilitadas.
+En este punto, el algoritmo admite la presencia de conexiones predefinidas entre ciertas celdas, lo cual permite reservar zonas del
+laberinto para funciones específicas, como la ``casa de los fantasmas''.
+
+\subsubsection{Generación Mediante Figuras}
+El núcleo del algoritmo radica en la generación iterativa de figuras poliominales que conectan las celdas adyacentes. En esta sección 
+se describe de forma detallada el proceso de generación:
+
+
+\subsubsection{Validación del Grafo Generado}
+
+\subsubsection{Generación de Túneles}
+
+\subsubsection{El Laberinto de Teselas}
+
+
+
 \section{Sistema Gráfico}
 \subsection{Interfaz de Usuario}
 \subsection{Head-Up Display}
@@ -465,13 +642,11 @@ El núcleo de la aplicación es un bucle que ejecuta la lógica del juego. Para 
 \section{Prototipos y Metodología}
 % TODO - Citar Scrum 
 A fin de organizar mejor el proceso de desarrollo del proyecto, se ha requerido un sistema que permita planificar el trabajo de forma efectiva y sostenible en el medio plazo.
-
 Pese a que el proyecto ha sido desarrollado en su totalidad por el alumno, con la ayuda y supervisión del tutor, la metodología de trabajo se ha asemejado a la propuesta en [[Scrum]]. Se han definido distintos sprints, asociados a una serie de objetivos. 
-
 Cada uno de estos sprints debe resultar en una versión estable del juego. Las ideas que pudieran surgir durante el transcurso de un sprint han sido apuntadas y revisadas al finalizar cada uno de los mismos.
 % TODO - Expandir
 Todos los elementos de la arquitectura se relacionan mediante el estado.
---- 
+
 
 
 

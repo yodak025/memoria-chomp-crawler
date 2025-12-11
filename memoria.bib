@@ -23,60 +23,255 @@
 % Si acaso, busca por citas en la WikiPedia (que sí ha de referenciar fuentes
 % primarias) y haz referencia a las mismas.
 
-@Book{bonabeau:_swarm,
-  author = 	 {Eric Bonabeau and Marco Dorigo and Guy Theraulaz},
-  title = 	 {Swarm Intelligence: From Natural to Articial Systems},
-  publisher = 	 {Oxford University Press, Inc.},
-  year = 	 1999
+% Pac Man Dossier
+@misc{pittman_pacman_dossier,
+  author = {Pittman, Jamey},
+  title = {The Pac-Man Dossier},
+  year = {2011},
+  url = {https://pacman.holenet.info},
+  note = {Análisis técnico exhaustivo sobre la lógica de programación, inteligencia artificial y mecánicas internas del arcade original de Namco},
+  urldate = {2024-05-20}
 }
 
-@Article{parnas72:_modules,
- author = {David L. Parnas},
- title = {On the criteria to be used in decomposing systems into modules},
- journal = CACM,
- volume = 15,
- year = 1972,
- pages = {1053-1058}
+% Generación de laberintos 
+@misc{shaunlebron:pacman-mazegen,
+  author =	 {Shaun LeBron},
+  title =	 {Pac-Man Maze Generation},
+  year =	 2018,
+  note =	 {\\ https://shaunlebron.github.io/pacman-mazegen}
 }
 
-@InCollection{GBarahona04:_debian,
-   author =       {González-Barahona, Jesús M. and Robles, Gregorio and
-                   Ortuño Pérez, Miguel and Rodero-Merino, Luis and
-                   Centeno González, José and Matellan-Olivera, Vicente and
-                   Castro-Barbero, Eva and de-las-Heras-Quirós, Pedro},
-   title =        {Analyzing the anatomy of {GNU/L}inux distributions:
-                   methodology and case studies ({R}ed {H}at and {D}ebian)},
-   pages =        {27-58},
-   editor =       {Koch, Stefan},
-   booktitle =    {Free/Open Source Software Development},
-   publisher =    {Idea Group Publishing},
-   address =      {Hershey, Pennsylvania, USA},
-   year =         {2004},
+% Arquitectura ECS
+@book{nystrom2014game,
+  title={Game Programming Patterns},
+  author={Nystrom, Robert},
+  year={2014},
+  publisher={Genever Benning},
+  address={Brighton},
+  isbn={978-0990582908},
+  note={Referencia fundamental que detalla la implementación de patrones arquitectónicos específicos para el desarrollo de motores de juego}
 }
 
-@TechReport{ghosh02:_developer_survey,
-  author = 	 {Rishab Aiyer Ghosh and Ruediger Glott and Bernhard Krieger and Gregorio Robles},
-  title = 	 {Survey of Developers (Free/Libre and Open Source Software: Survey and Study)},
-  institution =  {International Institute of Infonomics. University of Maastricht},
-  year = 	 2002,
-  address =	 {The Netherlands},
-  month =	 jun,
-  note =	 {\\ http://www.infonomics.nl/FLOSS/report}
+@mastersthesis{harkonen2019advantages,
+  title={Advantages and Implementation of Entity-Component-Systems},
+  author={H{\"a}rk{\"o}nen, Teemu},
+  year={2019},
+  school={Tampere University},
+  type={Master's Thesis},
+  url={https://trepo.tuni.fi/handle/123456789/27593},
+  note={Estudio académico que compara el rendimiento y la mantenibilidad entre arquitecturas OOP y ECS en entornos de tiempo real}
 }
 
-@Misc{wheeler01:_more_than_gigab,
-  author =	 {David A. Wheeler},
-  title =	 {More Than a Gigabuck: {E}stimating {GNU/L}inux's Size},
-  month =	 jun,
-  year =	 2001,
-  note =	 {\\ http://www.dwheeler.com/sloc/redhat71-v1/redhat71sloc.html}
+
+% HTML5 y APIs Web
+@book{freeman2011definitive,
+  title={The Definitive Guide to HTML5},
+  author={Freeman, Adam},
+  year={2011},
+  publisher={Apress},
+  address={New York},
+  isbn={978-1-4302-3776-9},
+  note={Enfocado en HTML5 como plataforma de desarrollo de aplicaciones ricas}
 }
 
-@inproceedings{robles2005self,
-  title={Self-organized development in libre software:
-         a model based on the stigmergy concept},
-  author={Robles, Gregorio and Merelo, Juan Juli\'an 
-          and Gonz\'alez-Barahona, Jes\'us M.},
-  booktitle={ProSim'05},
-  year={2005}
+@techreport{w3c_html5,
+  title={HTML5.2 Recommendation},
+  author={Faulkner, Steve and Eicholz, Arron and Leithead, Travis and Danilo, Alex and Moon, Sangwhan},
+  year={2017},
+  institution={World Wide Web Consortium (W3C)},
+  type={W3C Recommendation},
+  url={https://www.w3.org/TR/html52/},
+  note={Estándar oficial que define las APIs de conectividad y multimedia}
+}
+
+@online{mdn_web_apis,
+  author={{Mozilla Developer Network}},
+  title={Introduction to Web APIs},
+  year={2024},
+  url={https://developer.mozilla.org/en-US/docs/Web/API},
+  urldate={2024-05-20},
+  organization={Mozilla Foundation},
+  note={Documentación técnica sobre la implementación de WebGL y WebRTC}
+}
+
+% JavaScript y TypeScript
+@standard{ecma262,
+  title={ECMAScript 2023 Language Specification},
+  organization={ECMA International},
+  address={Geneva},
+  number={ECMA-262},
+  year={2023},
+  url={https://www.ecma-international.org/publications-and-standards/standards/ecma-262/},
+  note={Especificación técnica base sobre la que se construye el ecosistema JavaScript moderno}
+}
+
+@book{cherny2019programming,
+  title={Programming TypeScript: Making Your JavaScript Applications Scale},
+  author={Cherny, Boris},
+  year={2019},
+  publisher={O'Reilly Media},
+  address={Sebastopol, CA},
+  isbn={978-1492037651},
+  note={Manual de referencia técnica sobre el sistema de tipos y la escalabilidad en TypeScript}
+}
+
+@book{rauschmayer2014exploring,
+  title={Exploring ES6: Upgrade to the next version of JavaScript},
+  author={Rauschmayer, Axel},
+  year={2014},
+  publisher={Leanpub},
+  url={http://exploringjs.com/es6/},
+  note={Análisis profundo de las características modulares introducidas en ECMAScript 6}
+}
+
+% WebGL y Three.js
+@online{mdn_webgl,
+  author={{Mozilla Developer Network}},
+  title={WebGL: 2D and 3D graphics on the web},
+  year={2024},
+  url={https://developer.mozilla.org/es/docs/Web/API/WebGL_API},
+  urldate={2024-05-20},
+  organization={Mozilla Foundation},
+  note={Documentación de referencia sobre la integración de la API gráfica en el contexto del navegador}
+}
+
+@techreport{khronos_webgl_spec,
+  title={WebGL Specification 1.0},
+  author={Jackson, Dean and Gilbert, Jeff},
+  year={2011},
+  institution={The Khronos Group},
+  url={https://www.khronos.org/registry/webgl/specs/1.0/},
+  type={Standard Specification},
+  note={Estándar base que define la interfaz entre JavaScript y OpenGL ES}
+}
+
+@manual{threejs_docs,
+  title={Three.js Documentation},
+  author={{Three.js Authors}},
+  year={2024},
+  url={https://threejs.org/docs/},
+  organization={Three.js Project},
+  note={Documentación oficial de la biblioteca de abstracción para renderizado WebGL}
+}
+
+% React.js y Zustand 
+@book{banks2020learning,
+  title={Learning React: Modern Patterns for Developing React Apps},
+  author={Banks, Alex and Porcello, Eve},
+  year={2020},
+  publisher={O'Reilly Media},
+  edition={2nd},
+  address={Sebastopol, CA},
+  isbn={978-1492051725},
+  note={Texto de referencia sobre arquitectura de componentes y patrones de diseño en React}
+}
+
+@manual{react_docs,
+  title={React Documentation: The Library for Web and Native User Interfaces},
+  author={{Meta Platforms Inc.}},
+  year={2024},
+  url={https://react.dev/},
+  organization={Meta Open Source},
+  note={Documentación oficial que describe el algoritmo de reconciliación y el ciclo de vida de componentes}
+}
+
+@manual{zustand_docs,
+  title={Zustand Documentation: Bear necessities for state management in React},
+  author={{Poimandres Group}},
+  year={2024},
+  url={https://zustand.docs.pmnd.rs/getting-started/introduction},
+  organization={Poimandres Open Source Collective},
+  note={Portal oficial de documentación técnica. Detalla la API de hooks y patrones de integración con React},
+  urldate={2024-05-20}
+}
+
+% React Three Fiber
+@manual{r3f_docs,
+  title={React Three Fiber Documentation},
+  author={{Poimandres Group}},
+  year={2024},
+  url={https://docs.pmndrs.assets/react-three-fiber/getting-started/introduction},
+  organization={Poimandres Open Source Collective},
+  note={Especificación técnica del renderizador y guía de integración con el ecosistema Three.js},
+  urldate={2024-05-20}
+}
+
+@manual{react_reconciler,
+  title={React Custom Renderers},
+  author={{Meta Platforms Inc.}},
+  year={2024},
+  url={https://react.dev/reference/react-dom/server},
+  organization={Meta Open Source},
+  note={Documentación sobre la arquitectura interna de React que permite la creación de renderizadores personalizados como R3F},
+  urldate={2024-05-20}
+}
+
+ % Python y NumPy
+ @book{ramalho2022fluent,
+  title={Fluent Python: Clear, Concise, and Effective Programming},
+  author={Ramalho, Luciano},
+  year={2022},
+  publisher={O'Reilly Media},
+  edition={2nd},
+  address={Sebastopol, CA},
+  isbn={978-1492056355},
+  note={Referencia exhaustiva sobre las características idiomáticas y el modelo de datos de Python 3 moderno}
+}
+
+@article{harris2020array,
+  title={Array programming with {NumPy}},
+  author={Harris, Charles R. and Millman, K. Jarrod and van der Walt, St{\'e}fan J. and Gommers, Ralf and Virtanen, Pauli and Cournapeau, David and others},
+  journal={Nature},
+  volume={585},
+  number={7825},
+  pages={357--362},
+  year={2020},
+  publisher={Nature Publishing Group},
+  doi={10.1038/s41586-020-2649-2},
+  note={Artículo fundamental que describe la arquitectura interna, la vectorización y el impacto científico de NumPy}
+}
+
+@book{mckinney2022python,
+  title={Python for Data Analysis: Data Wrangling with pandas, NumPy, and Jupyter},
+  author={McKinney, Wes},
+  year={2022},
+  publisher={O'Reilly Media},
+  edition={3rd},
+  address={Sebastopol, CA},
+  isbn={978-1491957660},
+  note={Manual técnico sobre el ecosistema de análisis de datos y computación numérica en Python}
+}
+
+% WebAssembly y Pyodide
+
+@inproceedings{haas2017bringing,
+  title={Bringing the web up to speed with {WebAssembly}},
+  author={Haas, Andreas and Rossberg, Andreas and Schuff, Derek L and Titzer, Ben L and Holman, Michael and Gohman, Dan and Wagner, Luke and Zakai, Alon and Bastien, JF},
+  booktitle={Proceedings of the 38th ACM SIGPLAN Conference on Programming Language Design and Implementation},
+  pages={185--200},
+  year={2017},
+  organization={ACM},
+  note={Publicación fundamental que introduce la arquitectura y métricas de rendimiento de WebAssembly frente a JavaScript}
+}
+
+@article{rossberg2018bringing,
+  title={Bringing the web up to speed with {WebAssembly}},
+  author={Rossberg, Andreas and Titzer, Ben L and Haas, Andreas and Schuff, Derek L and others},
+  journal={Communications of the ACM},
+  volume={61},
+  number={12},
+  pages={107--117},
+  year={2018},
+  publisher={ACM New York, NY, USA},
+  note={Análisis profundo sobre el diseño de seguridad, portabilidad y el formato binario del estándar}
+}
+
+@manual{pyodide_docs,
+  title={Pyodide: Python distribution for the browser and Node.js based on WebAssembly},
+  author={{Pyodide Contributors}},
+  year={2024},
+  url={https://pyodide.org/en/stable/},
+  organization={Mozilla and Open Source Community},
+  note={Documentación técnica que detalla la arquitectura de portado de CPython vía Emscripten y la interfaz FFI},
+  urldate={2024-05-20}
 }
