@@ -608,12 +608,12 @@ Las celdas presentan una dualidad intrínseca: por un lado, son unidades discret
 matriz bidimensional; por otro, actúan como nodos en un grafo que interconecta cada celda con sus vecinas ortogonalmente adyacentes
 (vecindad de Von Newmann). Esto resulta muy útil, pues permite recorrer las celdas mediante la indexación matricial, pero también
 permite acceder de una celda a otra, a partir de las conexiones que se establecen entre ellas.
-% Debes explicar que esta matriz de celdas es solo una mitad. 
+
 
 El algoritmo comienza inicializando una matriz de celdas, donde cada celda está desconectada de sus vecinas. Resulta fundamental 
-precisar que todas las celdas contienen una referencia a sus vecinas, independientemente de si pertenecen o no a la misma 
-figura poliominal. Por tanto, se define \emph{la celda siguiente en una dirección} como aquella que se encuentre adyacente en dicha 
-dirección para una cierta celda. Esta es siempre es accesible desde la referencia que posee cada una de sus vecinas y solo se 
+precisar que todas las celdas contienen una referencia a sus adyacentes, independientemente de si pertenecen o no a la misma 
+figura poliominal. Por tanto, se define \emph{la celda siguiente en una dirección} como la celda colindante en dicha dirección 
+para una cierta celda. Esta es siempre es accesible desde la referencia que posee cada una de sus vecinas y solo se 
 considerarán conectadas las celdas que pertenezcan a la misma figura.
 
 El algorítmo comienza creando las referencias entre las celdas adyacentes, manteniendo todas las conexiones inicialmente deshabilitadas.
@@ -622,10 +622,30 @@ laberinto para funciones específicas, como la ``casa de los fantasmas''.
 
 \subsubsection{Generación Mediante Figuras}
 El núcleo del algoritmo radica en la generación iterativa de figuras poliominales que conectan las celdas adyacentes. En esta sección 
-se describe de forma detallada el proceso de generación:
+se describe de forma detallada el proceso de generación. 
+
+El algoritmo itera las columnas de la matriz de celdas de izquierda a derecha. En cada columna, se seleccionan las celdas que aún no
+pertenecen a ninguna figura. Estas celdas se denominan \emph{vacías}. Se selecciona una de estas celdas mediante una selección aleatoria de 
+distribución uniforme. A partir de esta celda, se comienza a construir una figura poliominal mediante la adición de celdas adyacentes. 
+La principal virtud del algoritmo es su riqueza a la hora de definir reglas de expansión de las figuras, manejando casos específicos y 
+definiendo un sistema de pesos que controla la probabilidad de expansión en función del tamaño actual de la figura. Tras agotar el 
+proceso de expansión, la figura resultante se consolida, marcando todas las celdas que la componen como ocupadas. 
+
+El algoritmo repite este proceso hasta que todas las celdas de la columna actual han sido ocupadas por alguna figura y, entonces,
+avanza a la siguiente columna. El proceso continúa hasta que no quede ninguna celda vacía. Cabe detacar que es posible encontrar figuras 
+conectadas con los bordes superior, inferior o derecho de la matriz.
+
+Dado que el laberinto debe ser simétrico respecto a un eje vertical, la matriz de celdas representa una mitad del laberinto, incluyendo
+la columna central que actúa como eje de simetría. Se debe tener en cuenta que todas las figuras que contengan una celda en esta columna
+resultarán en una única figura simétrica producto de la reflexión.
 
 
 \subsubsection{Validación del Grafo Generado}
+Tras el proceso de generación de figuras poliominales, es necesario validar que el grafo resultante cumple con las propiedades topológicas
+deseadas. En particular, se contemplan dos tipos de de errores de generación. El primero es la presencia de figuras cuadradas con dos 
+celdas por lado. Estas celdas no son válidas dado que crearían posiciones no navegables en su interior.
+
+El segundo caso requiere 
 
 \subsubsection{Generación de Túneles}
 
