@@ -951,9 +951,60 @@ siguiente nivel generado proceduralmente.
 
 
 \section{Sistema Gráfico}
+El sistema gráfico se estructura en tres capas diferenciadas: una interfaz de usuario
+bidimensional basada en componentes reutilizables, un subsistema de visualización
+de datos del juego superpuesto a la escena tridimensional, y la propia escena que
+renderiza la geometría del laberinto y las entidades mediante técnicas de gráficos
+por computador. Esta segregación favorece la separación de responsabilidades entre
+presentación, visualización de estado y representación espacial.
+
 \subsection{Interfaz de Usuario}
+La arquitectura de componentes de interfaz se organiza en una jerarquía de cuatro
+niveles inspirada en la metodología de diseño atómico y los principios SOLID. El primer
+nivel comprende componentes atómicos sin dependencias internas (botones, entradas de
+texto, iconos), que no acceden al estado global y operan exclusivamente mediante
+propiedades. El segundo nivel agrupa componentes compuestos que combinan entre uno y tres
+componentes atómicos para encapsular patrones reutilizables (modales, grupos de botones,
+visualizadores de estadísticas). El tercer nivel contiene componentes de distribución
+espacial que integran múltiples almacenes de estado y organizan secciones completas de
+la interfaz. El cuarto nivel orquesta vistas completas de aplicación que coordinan todos
+los niveles inferiores. Esta jerarquía impone un flujo de dependencias unidireccional
+estricto: los niveles superiores pueden importar componentes de niveles inferiores, pero
+la relación inversa está prohibida, garantizando modularidad y facilitando el
+mantenimiento mediante responsabilidad única por componente.
+
 \subsection{Head-Up Display}
+El sistema de visualización superpuesta actúa como puente entre la escena
+tridimensional y la interfaz bidimensional, leyendo datos de múltiples almacenes de
+estado (estado general del juego, entidad del jugador, información del laberinto) para
+presentar métricas en tiempo real sin interferir con el área de renderizado
+tridimensional. Este subsistema emplea actualización reactiva: los componentes se
+suscriben a cambios específicos en el estado y se re-renderizan únicamente cuando las
+propiedades observadas mutan, minimizando el coste computacional de actualización. La
+capa también gestiona eventos de teclado para pausar la simulación o invocar menús
+contextuales, coordinando la transición entre estados de juego mediante el almacén
+centralizado de estado general. La distribución espacial sigue un esquema de anclaje
+absoluto en las esquinas del viewport, reservando el área central exclusivamente para la
+escena tridimensional.
+
 \subsection{Escena}
+La escena tridimensional se construye mediante un paradigma declarativo de grafo de
+escena, donde cada nodo representa una entidad geométrica (mallas poligonales de
+personajes, geometría procedimental del laberinto) o un elemento de iluminación. Las
+mallas de entidades se suscriben al estado lógico discreto (posiciones en celdas,
+direcciones de movimiento, temporizadores de desplazamiento) y aplican una técnica de
+interpolación posicional que transforma las coordenadas discretas del espacio lógico en
+trayectorias continuas del espacio de renderizado. Esta interpolación se calcula en cada
+fotograma mediante una función lineal ponderada por el ratio entre tiempo transcurrido y
+duración total del movimiento entre celdas adyacentes, generando animaciones fluidas a
+pesar de que el motor lógico opere con actualizaciones discretas a intervalos variables.
+El desacoplamiento entre la frecuencia de actualización lógica (típicamente 10--15 Hz) y
+la frecuencia de renderizado (60 Hz o superior) permite mantener fluidez visual sin
+incrementar la carga computacional del motor de simulación. La configuración de la cámara
+emplea proyección perspectiva con rotación fija en ángulo cenital oblicuo, estableciendo
+una vista isométrica aproximada que recuerda a la estética del género roguelike
+tridimensional, mientras que el sistema de iluminación combina luz ambiental uniforme con
+fuentes puntuales para generar contraste volumétrico.
 \section{Estado}
 
 \section{Prototipos y Metodología}
